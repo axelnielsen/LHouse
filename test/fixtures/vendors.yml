@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  rut: 
+  accountnum: 
+  bankname: 
+  community_id: 
+  contactphone: 
+  contactmail: 
+  website: 
+  address: 
+  bankaccount_id: 1
+
+two:
+  name: 
+  rut: 
+  accountnum: 
+  bankname: 
+  community_id: 
+  contactphone: 
+  contactmail: 
+  website: 
+  address: 
+  bankaccount_id: 1

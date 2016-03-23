@@ -1,0 +1,15 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <h3>Eliminar Ingreso</h3>
+  </div>
+  <div class="modal-body">
+  <ul class="errors"></ul>
+  Confirma la eliminación de <b><%= @journalin.name %></b>?
+  </div>
+  <div class="modal-footer">
+    <%= link_to "si, eliminar", journalin_path(@journal), method: :delete, remote: true, class: "btn btn-danger" %>
+    <%= link_to "No, aún no", "#", class: "btn btn-default", data: { dismiss: "modal" } %>
+  </div>
+  </div>
+</div>

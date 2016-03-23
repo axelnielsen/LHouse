@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commonRoom_id: 1
+  initDate: 2016-02-25
+  finDate: 2016-02-25
+  initTime: 2016-02-25 16:40:42
+  finTime: 2016-02-25 16:40:42
+  apartment_id: 1
+
+two:
+  commonRoom_id: 1
+  initDate: 2016-02-25
+  finDate: 2016-02-25
+  initTime: 2016-02-25 16:40:42
+  finTime: 2016-02-25 16:40:42
+  apartment_id: 1

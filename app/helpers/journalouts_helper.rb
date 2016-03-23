@@ -1,0 +1,2 @@
+module JournaloutsHelper
+end

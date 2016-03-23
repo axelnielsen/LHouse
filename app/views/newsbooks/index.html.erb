@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="well">
+    <%= link_to "Nuevo Observación", new_newsbook_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-newsbook"></div>
+  
+  <table class="table-responsive order-column uk-table uk-table-hover uk-table-striped display">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>description</th>
+        <th>user_id</th>
+        <th>image</th>
+        
+        <td>&nbsp;</td>
+      </tr>
+    </thead>
+    <tbody class="newsbook-index">
+      <%= render "index" %>
+    </tbody>
+  </table>
+</div>
+<div id="newsbook-modal" class="modal fade"></div>

@@ -1,0 +1,58 @@
+<div class="container">
+
+    <h2>Movimientos</h2>
+    <%= link_to new_journal_path, remote: true, class: 'btn btn-success bold registrar' do %>
+        <i class="fa fa-plus"></i>
+        &nbsp;Nuevo Movimiento
+    <% end %>
+
+    <br><br>
+    <table id="journals" class="table-responsive order-column uk-table uk-table-hover uk-table-striped display">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Proveedor</th>
+                <th>Cta por pagar</th>
+                <th>Fecha vencimiento</th>
+                <th>Fecha pago</th>
+                <th>Usuario</th>
+                <th>Débito</th>
+                <th>Estado proveedor</th>
+                <th >Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+    <% @journals.each do |journal| %>
+      <%# Render table row partial for each person object %>
+      <%= render partial: 'row', locals: {journal: journal} %>
+    <% end %>
+  </tbody>
+    </table>
+
+    <%= render 'dialog' %>
+
+</div>
+<br>
+
+<%# Added Bootstrap data modal attribute %>
+<%= link_to 'New Journal', '#new_journal_modal', 'data-toggle' => 'modal' %>
+
+<%# Bootstrap modal markup. @see: http://getbootstrap.com/javascript/#modals %>
+<div class="modal fade" id="new_journal_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Create new Journal</h4>
+      </div>
+      <div class="modal-body">
+        <%# Render the new person form (passing modal => true to enable remote => true) %>
+        <%= render 'form', modal: true %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

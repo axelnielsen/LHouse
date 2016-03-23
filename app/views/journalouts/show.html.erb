@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @journalout.name %>
+</p>
+
+<p>
+  <strong>Voucher:</strong>
+  <%= @journalout.voucher %>
+</p>
+
+<p>
+  <strong>Receivableaccount:</strong>
+  <%= @journalout.receivableaccount_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @journalout.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @journalout.description %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @journalout.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @journalout.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @journalout.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @journalout.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @journalout.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @journalout.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @journalout.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_journalout_path(@journalout) %> |
+<%= link_to 'Back', journalouts_path %>

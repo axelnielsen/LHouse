@@ -1,0 +1,162 @@
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+<section>
+        <div class="col-md-12 well">
+            <div class="row">
+                <div class="board">
+                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
+                    <div class="board-inner">
+                    <ul class="nav nav-tabs" id="myTab">
+                    <div class="liner"></div>
+                     <li class="active">
+                     <a href="#home" data-toggle="tab" title="Comunidad">
+                      <span class="round-tabs one">
+                              <i class="glyphicon glyphicon-home"></i>
+                      </span> 
+                  </a></li>
+
+                  <li><a href="#profile" data-toggle="tab" title="Perfil usuario">
+                     <span class="round-tabs two">
+                         <i class="glyphicon glyphicon-user"></i>
+                     </span> 
+           </a>
+                 </li>
+                 <li><a href="#messages" data-toggle="tab" title="Datos departamento">
+                     <span class="round-tabs three">
+                          <i class="glyphicon glyphicon-gift"></i>
+                     </span> </a>
+                     </li>
+
+                     <li><a href="#settings" data-toggle="tab" title="Seguridad">
+                         <span class="round-tabs four">
+                              <i class="glyphicon glyphicon-comment"></i>
+                         </span> 
+                     </a></li>
+
+                     <li><a href="#doner" data-toggle="tab" title="Confirmar">
+                         <span class="round-tabs five">
+                              <i class="glyphicon glyphicon-ok"></i>
+                         </span> </a>
+                     </li>
+                     
+                     </ul></div>
+   
+                     <div class="tab-content">
+                      <div class="tab-pane fade in active" id="home">
+
+                          <h3 class="head text-center">Datos personales<sup>™</sup> <span style="color:#f48260;">♥</span></h3>
+
+
+                          <p class="narrow text-center">
+                              <div class="field">
+                                <div class="form-inputs">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+<div class="field">
+    <%= f.label :firstName %><br />
+    <%= f.text_field :firstName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastName %><br />
+    <%= f.text_field :lastName %>
+  </div>
+</div>
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                      </div>
+                      <div class="tab-pane fade" id="profile">
+                          <h3 class="head text-center">Create a Bootsnipp<sup>™</sup> Profile</h3>
+                          <p class="narrow text-center">
+                              <div class="field">
+    <%= f.label :rut %><br />
+    <%= f.text_field :rut %>
+  </div>
+
+  <div class="field">
+    <%= f.label :apartment %><br />
+    <%= f.text_field :apartment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :webSite %><br />
+    <%= f.text_field :webSite %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contactPhone %><br />
+    <%= f.text_field :contactPhone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contactEmail %><br />
+    <%= f.email_field :contactEmail %>
+  </div>
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> create your profile <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                          
+                      </div>
+                      <div class="tab-pane fade" id="messages">
+                          <h3 class="head text-center">Bootsnipp goodies</h3>
+                          <p class="narrow text-center">
+                              Lorem ipsum dolor sit amet, his ea mollis fabellas principes. Quo mazim facilis tincidunt ut, utinam saperet facilisi an vim.
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                      </div>
+                      <div class="tab-pane fade" id="settings">
+                          <h3 class="head text-center">Drop comments!</h3>
+                          <p class="narrow text-center">
+                              <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  <strong><%= f.input :profile_id, collection: Profile.all, label_method: :nombre %></strong>
+  <strong><%= f.input :community_id, collection: Community.all, label_method: :name %></strong>
+                          </p>
+                          
+                          <p class="text-center">
+                    <a href="" class="btn btn-success btn-outline-rounded green"> start using bootsnipp <span style="margin-left:10px;" class="glyphicon glyphicon-send"></span></a>
+                </p>
+                      </div>
+                      <div class="tab-pane fade" id="doner">
+  <div class="text-center">
+    <i class="img-intro icon-checkmark-circle"></i>
+</div>
+<h3 class="head text-center"></h3>
+<p class="narrow text-center">
+   <div class="actions">
+    <%= f.submit "Crear cuenta" %>
+  </div>
+<% end %>
+
+</p>
+</div>
+<div class="clearfix"></div>
+</div>
+<%= render "devise/shared/links" %>
+
+</div>
+</div>
+</div>
+</section>
+
+                   

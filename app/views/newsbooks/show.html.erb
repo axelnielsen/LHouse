@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @newsbook.name %>
+</p>
+
+<p>
+  <strong>Voucher:</strong>
+  <%= @newsbook.voucher %>
+</p>
+
+<p>
+  <strong>Receivableaccount:</strong>
+  <%= @newsbook.receivableaccount_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @newsbook.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @newsbook.description %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @newsbook.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @newsbook.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @newsbook.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @newsbook.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @newsbook.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @newsbook.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @newsbook.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_newsbook_path(@newsbook) %> |
+<%= link_to 'Back', newsbooks_path %>

@@ -1,0 +1,1 @@
+json.extract! @journal, :id, :name, :vendor_id, :paybleaccount_id, :receivableaccount_id, :credit, :debit, :description, :image, :journalnum, :community_id, :duedate, :paymentdate, :user_id, :created_at, :updated_at

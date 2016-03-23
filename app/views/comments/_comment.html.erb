@@ -1,0 +1,32 @@
+   <ul class="media-list">                             
+                                <li class="media media-replied" id="replied">
+                                    <a class="pull-left" href="#">
+                                      <img class="media-object img-circle" src="https://pbs.twimg.com/profile_images/442656111636668417/Q_9oP8iZ.jpeg" alt="profile">
+                                    </a>
+                                    <div class="media-body">
+                                      <div class="well well-lg">
+                                          <h4 class="media-heading text-uppercase reviews"><span class="glyphicon glyphicon-share-alt"></span>  <%= comment.user_id %> </h4></h4>
+                                          <ul class="media-date text-uppercase reviews list-inline">
+                                             <small>Creado hace <%= time_ago_in_words(comment.created_at) %></small>
+                                          </ul>
+                                          <p class="media-comment">
+                                            <%= comment.comment %> 
+                                          </p>
+                                         <a class="btn btn-info text-uppercase" data-toggle="collapse" href="#Responder<%=comment.id%>" id="reply"><span class="glyphicon glyphicon-share-alt"></span> Responder</a>
+                                      </div>              
+                          			  </div>              
+                     			</li>
+                     			<div id="Responder<%=comment.id%>"        	
+								  <%= form_for [comment, Comment.new] do |f| %>
+								      <%= f.text_area :comment, placeholder: "Responder" %><br/>
+								      <%= f.submit "Responder"  %>
+								      <% end %>
+								  <ul>
+								      <%= render partial: 'comments/comment', collection: comment.comments %>
+								  </ul>
+
+								</div>
+								</ul>
+
+
+

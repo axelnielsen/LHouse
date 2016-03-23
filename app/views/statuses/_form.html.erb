@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@status, html: {class: "form-horizontal"}) do |f| %>
+  <% if @status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@status.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="form-actions">
+  	<strong><%= f.input :user_id, collection: User.all, label_method: :email %></strong> 
+  	<strong><%= f.input :statusType_id, collection: StatusType.all, label_method: :email %></strong>
+    <%=f.input :content ,:input_html => {:maxlength => 144, :size => 144, :style=> 'width: 200px'} %>
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+

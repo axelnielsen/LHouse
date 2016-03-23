@@ -1,0 +1,31 @@
+<h1>Listing payableaccounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Subtype</th>
+      <th>Subsubtype</th>
+      <th>Community</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payableaccounts.each do |payableaccount| %>
+      <tr>
+        <td><%= payableaccount.type %></td>
+        <td><%= payableaccount.subtype %></td>
+        <td><%= payableaccount.subsubtype %></td>
+        <td><%= payableaccount.community_id %></td>
+        <td><%= link_to 'Show', payableaccount %></td>
+        <td><%= link_to 'Edit', edit_payableaccount_path(payableaccount) %></td>
+        <td><%= link_to 'Destroy', payableaccount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payableaccount', new_payableaccount_path %>

@@ -1,0 +1,1 @@
+json.extract! @journalout, :id, :name, :voucher, :payableaccount_id, :amount, :description, :community_id, :paymentdate, :duedate, :paymentmethod_id, :image, :period, :user_id, :created_at, :updated_at

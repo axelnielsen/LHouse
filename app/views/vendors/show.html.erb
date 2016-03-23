@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vendor.name %>
+</p>
+
+<p>
+  <strong>Voucher:</strong>
+  <%= @vendor.voucher %>
+</p>
+
+<p>
+  <strong>Receivableaccount:</strong>
+  <%= @vendor.receivableaccount_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @vendor.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @vendor.description %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @vendor.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @vendor.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @vendor.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @vendor.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @vendor.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @vendor.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vendor.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
+<%= link_to 'Back', vendors_path %>

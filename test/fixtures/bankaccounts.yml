@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  accountholder: 
+  accountnum: 
+  bankname: 
+  initbalance: 
+  community_id: 1
+
+two:
+  name: 
+  accountholder: 
+  accountnum: 
+  bankname: 
+  initbalance: 
+  community_id: 1

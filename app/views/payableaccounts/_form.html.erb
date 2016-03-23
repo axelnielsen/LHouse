@@ -1,0 +1,14 @@
+<%= simple_form_for(@payableaccount) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :type %>
+    <%= f.input :subtype %>
+    <%= f.input :subsubtype %>
+    <%= f.input :community_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

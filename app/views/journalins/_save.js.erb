@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @journalin.errors.any? %>
+  <% @journalin.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".journalin-index").html("<%= escape_javascript(render 'index') %>")
+  $("#journalin-modal").modal("hide")
+<% end %>

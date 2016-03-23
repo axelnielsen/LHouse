@@ -1,0 +1,37 @@
+<h1>Listing tasts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Initdate</th>
+      <th>Inithour</th>
+      <th>Findate</th>
+      <th>Finhour</th>
+      <th>User</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasts.each do |tast| %>
+      <tr>
+        <td><%= tast.name %></td>
+        <td><%= tast.initdate %></td>
+        <td><%= tast.inithour %></td>
+        <td><%= tast.findate %></td>
+        <td><%= tast.finhour %></td>
+        <td><%= tast.user_id %></td>
+        <td><%= tast.content %></td>
+        <td><%= link_to 'Show', tast %></td>
+        <td><%= link_to 'Edit', edit_tast_path(tast) %></td>
+        <td><%= link_to 'Destroy', tast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tast', new_tast_path %>

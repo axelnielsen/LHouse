@@ -1,0 +1,16 @@
+<%= simple_form_for(@bankaccount) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :accountholder %>
+    <%= f.input :accountnum %>
+    <%= f.input :bankname %>
+    <%= f.input :initbalance %>
+    <%= f.input :community_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tast.name %>
+</p>
+
+<p>
+  <strong>Initdate:</strong>
+  <%= @tast.initdate %>
+</p>
+
+<p>
+  <strong>Inithour:</strong>
+  <%= @tast.inithour %>
+</p>
+
+<p>
+  <strong>Findate:</strong>
+  <%= @tast.findate %>
+</p>
+
+<p>
+  <strong>Finhour:</strong>
+  <%= @tast.finhour %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tast.user_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @tast.content %>
+</p>
+
+<%= link_to 'Edit', edit_tast_path(@tast) %> |
+<%= link_to 'Back', tasts_path %>

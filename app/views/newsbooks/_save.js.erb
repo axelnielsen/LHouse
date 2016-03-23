@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @newsbook.errors.any? %>
+  <% @newsbook.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".newsbook-index").html("<%= escape_javascript(render 'index') %>")
+  $("#newsbook-modal").modal("hide")
+<% end %>

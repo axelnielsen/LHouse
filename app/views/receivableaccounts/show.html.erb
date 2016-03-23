@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @receivableaccount.name %>
+</p>
+
+<p>
+  <strong>Initbalance:</strong>
+  <%= @receivableaccount.initbalance %>
+</p>
+
+<p>
+  <strong>Descroption:</strong>
+  <%= @receivableaccount.descroption %>
+</p>
+
+<p>
+  <strong>Pymenttype:</strong>
+  <%= @receivableaccount.pymenttype_id %>
+</p>
+
+<p>
+  <strong>Subtype:</strong>
+  <%= @receivableaccount.subtype %>
+</p>
+
+<p>
+  <strong>Ammount:</strong>
+  <%= @receivableaccount.ammount %>
+</p>
+
+<p>
+  <strong>Percentammount:</strong>
+  <%= @receivableaccount.percentammount %>
+</p>
+
+<p>
+  <strong>Aliquot:</strong>
+  <%= @receivableaccount.aliquot %>
+</p>
+
+<p>
+  <strong>Building:</strong>
+  <%= @receivableaccount.building %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @receivableaccount.community_id %>
+</p>
+
+<%= link_to 'Edit', edit_receivableaccount_path(@receivableaccount) %> |
+<%= link_to 'Back', receivableaccounts_path %>

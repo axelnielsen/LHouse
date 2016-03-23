@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id_from: 1
+  user_id_to: 1
+  message: MyText
+  active: false
+  viewed: false
+  name: MyString
+  deleted_at: 2016-02-27 17:13:44
+
+two:
+  user_id_from: 1
+  user_id_to: 1
+  message: MyText
+  active: false
+  viewed: false
+  name: MyString
+  deleted_at: 2016-02-27 17:13:44

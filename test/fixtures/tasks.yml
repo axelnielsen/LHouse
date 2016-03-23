@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  inidate: 2016-03-21
+  findate: 2016-03-21
+  inihour: 2016-03-21 18:56:57
+  finhour: 2016-03-21 18:56:57
+  content: MyText
+  user_id_from: 1
+  user_id_to: 1
+  perccompleted: 1
+
+two:
+  name: MyString
+  inidate: 2016-03-21
+  findate: 2016-03-21
+  inihour: 2016-03-21 18:56:57
+  finhour: 2016-03-21 18:56:57
+  content: MyText
+  user_id_from: 1
+  user_id_to: 1
+  perccompleted: 1

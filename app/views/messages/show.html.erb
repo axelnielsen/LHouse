@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User id from:</strong>
+  <%= @message.user_id_from %>
+</p>
+
+<p>
+  <strong>User id to:</strong>
+  <%= @message.user_id_to %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @message.message %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @message.active %>
+</p>
+
+<p>
+  <strong>Viewed:</strong>
+  <%= @message.viewed %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @message.name %>
+</p>
+
+<p>
+  <strong>Deleted at:</strong>
+  <%= @message.deleted_at %>
+</p>
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

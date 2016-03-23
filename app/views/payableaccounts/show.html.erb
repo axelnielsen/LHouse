@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @payableaccount.type %>
+</p>
+
+<p>
+  <strong>Subtype:</strong>
+  <%= @payableaccount.subtype %>
+</p>
+
+<p>
+  <strong>Subsubtype:</strong>
+  <%= @payableaccount.subsubtype %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @payableaccount.community_id %>
+</p>
+
+<%= link_to 'Edit', edit_payableaccount_path(@payableaccount) %> |
+<%= link_to 'Back', payableaccounts_path %>

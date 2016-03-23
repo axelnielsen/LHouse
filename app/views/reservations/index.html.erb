@@ -1,0 +1,35 @@
+<h1>Listing reservations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Commonroom</th>
+      <th>Initdate</th>
+      <th>Findate</th>
+      <th>Inittime</th>
+      <th>Fintime</th>
+      <th>Apartment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.commonRoom_id %></td>
+        <td><%= reservation.initDate %></td>
+        <td><%= reservation.finDate %></td>
+        <td><%= reservation.initTime %></td>
+        <td><%= reservation.finTime %></td>
+        <td><%= reservation.apartment_id %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation', new_reservation_path %>

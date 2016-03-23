@@ -1,0 +1,43 @@
+<h1>Listing receivableaccounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Initbalance</th>
+      <th>Descroption</th>
+      <th>Pymenttype</th>
+      <th>Subtype</th>
+      <th>Ammount</th>
+      <th>Percentammount</th>
+      <th>Aliquot</th>
+      <th>Building</th>
+      <th>Community</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @receivableaccounts.each do |receivableaccount| %>
+      <tr>
+        <td><%= receivableaccount.name %></td>
+        <td><%= receivableaccount.initbalance %></td>
+        <td><%= receivableaccount.descroption %></td>
+        <td><%= receivableaccount.pymenttype_id %></td>
+        <td><%= receivableaccount.subtype %></td>
+        <td><%= receivableaccount.ammount %></td>
+        <td><%= receivableaccount.percentammount %></td>
+        <td><%= receivableaccount.aliquot %></td>
+        <td><%= receivableaccount.building %></td>
+        <td><%= receivableaccount.community_id %></td>
+        <td><%= link_to 'Show', receivableaccount %></td>
+        <td><%= link_to 'Edit', edit_receivableaccount_path(receivableaccount) %></td>
+        <td><%= link_to 'Destroy', receivableaccount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Receivableaccount', new_receivableaccount_path %>

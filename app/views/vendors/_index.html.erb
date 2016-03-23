@@ -1,0 +1,14 @@
+<% @vendors.each do |vendor| %>
+  <tr>
+    <td><%= vendor.name %></td>
+    <td><%= vendor.rut %></td>
+    <td><%= vendor.accountnum %></td>
+    <td><%= vendor.bankname %></td>
+    <td><%= vendor.contactphone %></td>
+    <td><%= vendor.contactmail %></td>
+    <td><%= vendor.website %></td>
+    <td><%= vendor.address %></td>
+    <td><%= vendor.bankaccount_id %></td>
+    <td><%= link_to "Editar", edit_vendor_path(vendor), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

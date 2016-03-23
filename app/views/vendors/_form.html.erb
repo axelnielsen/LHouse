@@ -1,0 +1,63 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for @vendor, remote: true, html: { style: "display:inline;" } do |f| %>
+      <div class="modal-body">
+        <ul class="errors"></ul>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :name, class:"control-label" %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :rut, class:"control-label" %>
+          <%= f.text_field :rut, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :accountnum, class:"control-label" %>
+          <%= f.text_field :accountnum, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :bankname, class:"control-label" %>
+          <%= f.text_field :bankname, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :contactphone, class:"control-label" %>
+          <%= f.text_field :contactphone, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :contactmail, class:"control-label" %>
+          <%= f.text_field :contactmail, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :website, class: "control-label" %>
+          <%= f.text_field :website, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :address, class: "control-label" %>
+          <%= f.text_field :address, class: "form-control" %>
+        </div>
+  </div>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :bankaccount_id, class: "control-label" %>
+          <%= f.text_field :bankaccount_id, class: "form-control" %>
+        </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit class: "btn btn-success" %>
+        <%= link_to "Cancelar", "#", class: "btn btn-danger", data: {dismiss: "modal"} %>
+      </div>
+    <% end %>
+  </div>
+</div>

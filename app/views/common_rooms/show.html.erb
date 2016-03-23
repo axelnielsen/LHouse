@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @common_room.name %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @common_room.community_id %>
+</p>
+
+<%= link_to 'Editar', edit_common_room_path(@common_room) , class:"btn btn-success"%>
+<%= link_to 'Atrás', common_rooms_path, class:"btn btn-warning"%>
+

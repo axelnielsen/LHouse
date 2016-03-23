@@ -1,0 +1,9 @@
+<% @newsbooks.each do |newsbook| %>
+  <tr>
+    <td><%= newsbook.name %></td>
+    <td><%= newsbook.description %></td>
+    <td><%= newsbook.user_id %></td>
+    <td><%= newsbook.image %></td>
+    <td><%= link_to "Editar", edit_newsbook_path(newsbook), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

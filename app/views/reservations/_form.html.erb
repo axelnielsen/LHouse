@@ -1,0 +1,16 @@
+<%= simple_form_for(@reservation) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :commonRoom_id %>
+    <%= f.input :initDate %>
+    <%= f.input :finDate %>
+    <%= f.input :initTime %>
+    <%= f.input :finTime %>
+    <%= f.input :apartment_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

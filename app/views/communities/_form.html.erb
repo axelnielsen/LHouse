@@ -1,0 +1,27 @@
+<%= simple_form_for(@community, html: {class: "form-horizontal"}) do |f| %>
+  <% if @community.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@community.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @community.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+antes de form inputs
+<div class="form-inputs">
+    <%= f.input :nombre %>
+    <%= f.input :address %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.input :website %>
+  </div>
+  antes de form actions
+  <div class="form-actions">
+    
+    <%= f.button :submit %>
+  </div>
+  final
+<% end %>

@@ -1,0 +1,1 @@
+json.extract! @vendor, :id, :name, :voucher, :receivableaccount_id, :amount, :description, :community_id, :paymentdate, :apartment_id, :paymentmethod_id, :image, :period, :user_id, :created_at, :updated_at

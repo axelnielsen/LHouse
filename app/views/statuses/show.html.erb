@@ -1,0 +1,42 @@
+
+  <div class="row">      
+        <div class="comment-tabs">
+              <div class="tab-content">
+                <div class="tab-pane active" id="comments-logout"> 
+                	              
+                    <ul class="media-list">
+                      <li class="media">
+                        <a class="pull-left" href="#">
+                          <img class="media-object img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
+                        </a>
+                        <div class="media-body">
+                          <div class="well well-lg">
+                              <h4 class="media-heading text-uppercase reviews"><%=@status.user_id%> </h4>
+                              <ul class="media-date text-uppercase reviews list-inline">
+                                <li class="dd"><%= @status.created_at %></li>
+                                
+                              </ul>
+                              <p class="media-comment">
+                              <%= link_to(@status.id, @status.content, target: "_blank") %> <%=@status.content%> - <%= link_to("Show Page", @status) %>
+                              </p>
+
+                              <a class="btn btn-info text-uppercase"  id="reply"><span class="glyphicon glyphicon-share-alt"></span> Responder</a>
+                              <a class="btn btn-warning text-uppercase" data-toggle="collapse" href="#replyOne"><span class="glyphicon glyphicon-comment"></span> 2 comments</a>
+                          </div>              
+                        </div>      
+
+
+
+
+                        <div class="collapse" id="replyOne">
+                        	<%= render(partial: 'comments/comment', collection: @status.comments) %>
+                          
+               			</div> 
+            </div>
+        </div>
+	
+
+	</div>
+
+
+</div>

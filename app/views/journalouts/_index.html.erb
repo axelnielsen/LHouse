@@ -1,0 +1,14 @@
+<% @journalouts.each do |journalout| %>
+  <tr>
+    <td><%= journalout.name %></td>
+    <td><%= journalout.voucher %></td>
+    <td><%= journalout.payable_id %></td>
+    <td><%= journalout.amount %></td>
+    <td><%= journalout.paymentdate %></td>
+    <td></td>
+    <td><%= journalout.paymentmethod_id %></td>
+    <td><%= journalout.image %></td>
+    <td><%= journalout.period %></td>
+    <td><%= link_to "Editar", edit_journalout_path(journalout), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

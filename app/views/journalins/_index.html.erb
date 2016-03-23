@@ -1,0 +1,14 @@
+<% @journalins.each do |journalin| %>
+  <tr>
+    <td><%= journalin.name %></td>
+    <td><%= journalin.voucher %></td>
+    <td><%= journalin.receivableaccount_id %></td>
+    <td><%= journalin.amount %></td>
+    <td><%= journalin.paymentdate %></td>
+    <td><%= journalin.apartment_id %></td>
+    <td><%= journalin.paymentmethod_id %></td>
+    <td><%= journalin.image %></td>
+    <td><%= journalin.period %></td>
+    <td><%= link_to "Editar", edit_journalin_path(journalin), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

@@ -1,0 +1,11 @@
+<tr id="<%= journal.id %>">
+  <td><%= journal.name %></td>
+   <td><%= journal.vendor_id %></td>
+    <td><%= journal.paybleaccount_id %></td>
+     <td><%= journal.duedate %></td>
+     <td><%= journal.paymentdate %></td>
+      <td><%= journal.user_id %></td>
+       <td><%= journal.debit %></td>
+  			<td>Estado</td>
+      <td><%= link_to "Editar", edit_journal_path(journal)%></td>
+</tr>

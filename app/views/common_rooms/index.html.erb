@@ -1,0 +1,34 @@
+<table id="common_rooms" class="table-responsive order-column uk-table uk-table-hover uk-table-striped display" >
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Community</th>
+      <th>Acciones</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @common_rooms.each do |common_room| %>
+      <tr>
+        <td><%= common_room.name %></td>
+        <td><%= common_room.community_id %></td>
+        <td><%= link_to common_room, class: "btn btn-default" do %>
+            <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+            <% end %> 
+            <%= link_to edit_common_room_path(common_room), class: "btn btn-default" do %>
+            <span class="glyphicon glyphicon-edit" style="color:orange"></span>
+            <% end %>
+            <%= link_to common_room, method: :delete, data:{confirm: "Confirma la aliminación?"}, class: "btn btn-default" do%>
+            <span class="glyphicon glyphicon-trash" style="color:red"></span>
+            <% end %>
+        </td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "Nuevo Espacio Común", new_common_room_path, class:"btn btn-primary" %>
+

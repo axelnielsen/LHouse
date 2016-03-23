@@ -1,0 +1,43 @@
+<table id="tasks" class="table-responsive order-column uk-table uk-table-hover uk-table-striped display" >
+  <thead>
+    <tr>
+      <th>Tarea</th>
+      <th>Fecha Inicio</th>
+      <th>Fecha Fin</th>
+      <th>Creador</th>
+      <th>Ejecutante</th>
+      <th>Avance</th>
+      <th>Acciones</th>
+
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= link_to task.name, @task %></td>
+        <td><%= task.inidate %></td>
+        <td><%= task.findate %></td>
+        <td><%= task.user_id_from %></td>
+        <td><%= task.user_id_to %></td>
+        <td><%= task.perccompleted %></td>
+         <td><%= link_to task, class: "btn btn-default" do %>
+            <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+            <% end %> 
+            <%= link_to edit_task_path(task), class: "btn btn-default" do %>
+            <span class="glyphicon glyphicon-edit" style="color:orange"></span>
+            <% end %>
+            <%= link_to task, method: :delete, data:{confirm: "Confirma la aliminación?"}, class: "btn btn-default" do%>
+            <span class="glyphicon glyphicon-trash" style="color:red"></span>
+            <% end %>
+        </td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "Nueva tarea", new_task_path, class:"btn btn-primary" %>
+

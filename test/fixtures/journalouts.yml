@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  voucher: MyString
+  payable_id: 1
+  amount: 9.99
+  description: MyString
+  community_id: 1
+  paymentdate: 2016-03-22
+  duedate: 2016-03-22
+  paymentmethod_id: 1
+  image: MyString
+  period: MyString
+  user_id: 1
+
+two:
+  name: MyString
+  voucher: MyString
+  payable_id: 1
+  amount: 9.99
+  description: MyString
+  community_id: 1
+  paymentdate: 2016-03-22
+  duedate: 2016-03-22
+  paymentmethod_id: 1
+  image: MyString
+  period: MyString
+  user_id: 1
