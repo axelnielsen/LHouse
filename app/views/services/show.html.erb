@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @service.name %>
+</p>
+
+<p>
+  <strong>Voucher:</strong>
+  <%= @service.voucher %>
+</p>
+
+<p>
+  <strong>Receivableaccount:</strong>
+  <%= @service.receivableaccount_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @service.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @service.description %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @service.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @service.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @service.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @service.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @service.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @service.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>

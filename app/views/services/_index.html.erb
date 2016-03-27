@@ -1,0 +1,13 @@
+<% @services.each do |service| %>
+  <tr>
+    <td><%= service.name %></td>
+    <td><%= service.period %></td>
+    <td><%= service.porcgastocomun %></td>
+    <td><%= service.porcaguacaliente %></td>
+    <td><%= service.porccalefaccion %></td>
+    <td><%= service.vendor_id %></td>
+    <td><%= service.custnumber %></td>
+    <td><%= service.payableaccount_id %></td>
+    <td><%= link_to "Editar", edit_service_path(service), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

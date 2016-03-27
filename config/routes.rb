@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :services
+
+  resources :configsystems
+
+  resources :configurations
+
   resources :newsbooks
 
   resources :journalouts

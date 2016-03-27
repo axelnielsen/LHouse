@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period: MyString
+  porcgastocomun: 9.99
+  porcaguacaliente: 9.99
+  porccalefaccion: 9.99
+  vendor_id: 1
+  custnumber: MyString
+  payableaccount_id: 1
+
+two:
+  period: MyString
+  porcgastocomun: 9.99
+  porcaguacaliente: 9.99
+  porccalefaccion: 9.99
+  vendor_id: 1
+  custnumber: MyString
+  payableaccount_id: 1

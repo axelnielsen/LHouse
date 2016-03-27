@@ -1,0 +1,9 @@
+<% @reservations.each do |reservation| %>
+
+  <tr>
+    <td><%= reservation.commonRoom_id %></td>
+    <td><%= reservation.initDate%></td>
+    <td><%= reservation.finDate %></td>
+    <td><%= link_to "Editar", edit_reservation_path(reservation), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

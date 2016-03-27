@@ -1,33 +1,63 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Commonroom:</strong>
-  <%= @reservation.commonRoom_id %>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
 </p>
 
 <p>
-  <strong>Initdate:</strong>
-  <%= @reservation.initDate %>
+  <strong>Voucher:</strong>
+  <%= @reservation.voucher %>
 </p>
 
 <p>
-  <strong>Findate:</strong>
-  <%= @reservation.finDate %>
+  <strong>Receivableaccount:</strong>
+  <%= @reservation.receivableaccount_id %>
 </p>
 
 <p>
-  <strong>Inittime:</strong>
-  <%= @reservation.initTime %>
+  <strong>Amount:</strong>
+  <%= @reservation.amount %>
 </p>
 
 <p>
-  <strong>Fintime:</strong>
-  <%= @reservation.finTime %>
+  <strong>Description:</strong>
+  <%= @reservation.description %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @reservation.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @reservation.paymentdate %>
 </p>
 
 <p>
   <strong>Apartment:</strong>
   <%= @reservation.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @reservation.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @reservation.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @reservation.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reservation.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |

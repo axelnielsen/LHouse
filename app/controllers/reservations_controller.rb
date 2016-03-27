@@ -2,41 +2,71 @@ class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
-
+  # GET /reservations
+  # GET /reservations.json
   def index
     @reservations = Reservation.all
-    respond_with(@reservations)
   end
 
+  # GET /reservations/1
+  # GET /reservations/1.json
   def show
-    respond_with(@reservation)
+    @reservation = Reservation.find([:id])
   end
 
+  # GET /reservations/new
   def new
     @reservation = Reservation.new
-    respond_with(@reservation)
   end
 
+  # GET /reservations/1/edit
   def edit
+     @reservation = Reservation.find(params[:id])
   end
 
+  # POST /reservations
+  # POST /reservations.json
   def create
+    @reservations = Reservation.all
     @reservation = Reservation.new(reservation_params)
-    @reservation.save
-    respond_with(@reservation)
+
+    respond_to do |format|
+      if @reservation.save
+        format.html { redirect_to @reservation, notice: 'Reserva creada exitosamente' }
+        format.json { render :show, status: :created, location: @reservation }
+      else
+        format.html { render :new }
+        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
+  # PATCH/PUT /reservations/1
+  # PATCH/PUT /reservations/1.json
   def update
-    @reservation.update(reservation_params)
-    respond_with(@reservation)
+    respond_to do |format|
+      if @reservation.update(reservation_params)
+        format.html { redirect_to @reservation, notice: 'Reserva actualizada exitosamente' }
+        format.json { render :show, status: :ok, location: @reservation }
+      else
+        format.html { render :edit }
+        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
+  # DELETE /reservations/1
+  # DELETE /reservations/1.json
   def destroy
     @reservation.destroy
-    respond_with(@reservation)
+    respond_to do |format|
+      format.html { redirect_to reservations_url, notice: 'Reserva eliminada exitosamente' }
+      format.json { head :no_content }
+    end
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
     def set_reservation
       @reservation = Reservation.find(params[:id])
     end

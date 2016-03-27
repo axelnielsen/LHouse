@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @configsystem.errors.any? %>
+  <% @configsystem.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".configsystem-index").html("<%= escape_javascript(render 'index') %>")
+  $("#configsystem-modal").modal("hide")
+<% end %>

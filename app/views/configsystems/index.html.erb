@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="well">
+    <%= link_to "Nuevo Ingreso", new_configsystem_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-configsystem"></div>
+  
+  <table class="table-responsive order-column uk-table uk-table-hover uk-table-striped display">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>voucher</th>
+        <th>receivableaccount_id</th>
+        <th>amount</th>
+        <th>paymentdate</th>
+        <th>apartment_id</th>
+        <th>paymentmethod_id</th>
+        <th>image</th>
+        <td>period</td>
+        <td>&nbsp;</td>
+      </tr>
+    </thead>
+    <tbody class="configsystem-index">
+      <%= render "index" %>
+    </tbody>
+  </table>
+</div>
+<div id="configsystem-modal" class="modal fade"></div>

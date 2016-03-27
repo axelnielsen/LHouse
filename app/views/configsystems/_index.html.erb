@@ -1,0 +1,15 @@
+<% @configsystems.each do |configsystem| %>
+  <tr>
+    <td><%= configsystem.interesttype_id %></td>
+    <td><%= configsystem.interesttypeperc %></td>
+    <td><%= configsystem.interestreceivableaccount_id %></td>
+    <td><%= configsystem.penaltyamount %></td>
+    <td><%= configsystem.penaltyreceivableaccount_id %></td>
+    <td><%= configsystem.periodmonth %></td>
+    <td><%= configsystem.periodinit %></td>
+    <td><%= configsystem.periodfin %></td>
+    <td><%= configsystem.extension %></td>
+     <td><%= configsystem.correctionday %></td>
+    <td><%= link_to "Editar", edit_configsystem_path(configsystem), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

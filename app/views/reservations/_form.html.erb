@@ -1,16 +1,42 @@
-<%= simple_form_for(@reservation) do |f| %>
-  <%= f.error_notification %>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for @reservation, remote: true, html: { style: "display:inline;" } do |f| %>
+      <div class="modal-body">
+        <ul class="errors"></ul>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :commonRoom_id, class:"control-label" %>
+          <%= f.text_field :commonRoom_id, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :initDate, class:"control-label" %>
+          <%= f.text_field :initDate, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :initTime, class:"control-label" %>
+          <%= f.text_field :initTime, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :finDate, class:"control-label" %>
+          <%= f.text_field :finDate, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :finTime, class:"control-label" %>
+          <%= f.text_field :finTime, class: "form-control" %>
+        </div>
+</div>
 
-  <div class="form-inputs">
-    <%= f.input :commonRoom_id %>
-    <%= f.input :initDate %>
-    <%= f.input :finDate %>
-    <%= f.input :initTime %>
-    <%= f.input :finTime %>
-    <%= f.input :apartment_id %>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit class: "btn btn-success" %>
+        <%= link_to "Cancelar", "#", class: "btn btn-danger", data: {dismiss: "modal"} %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>

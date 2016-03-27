@@ -1,0 +1,1 @@
+json.extract! @configsystem, :id, :interesttype_id, :interesttypeperc, :interestreceivableaccount_id, :penaltyamount, :penaltyreceivableaccount_id, :periodyear, :periodmonth, :periodinit, :periodfin, :extension, :correctionday, :created_at, :updated_at

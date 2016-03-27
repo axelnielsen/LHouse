@@ -11,6 +11,7 @@ gem 'devise'
 gem 'protected_attributes'
 
 gem 'simple_form'
+gem "simple_calendar", "~> 2.0"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

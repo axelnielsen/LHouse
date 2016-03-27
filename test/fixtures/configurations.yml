@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  interesttype_id: 1
+  interesttypeperc: 9.99
+  interestreceivableaccount_id: 1
+  penaltyamount: 9.99
+  penaltyreceivableaccount_id: 1
+  periodyear: MyString
+  periodmonth: MyString
+  periodinit: 2016-03-26
+  periodfin: 2016-03-26
+  extension: 1
+  correctionday: 1
+
+two:
+  interesttype_id: 1
+  interesttypeperc: 9.99
+  interestreceivableaccount_id: 1
+  penaltyamount: 9.99
+  penaltyreceivableaccount_id: 1
+  periodyear: MyString
+  periodmonth: MyString
+  periodinit: 2016-03-26
+  periodfin: 2016-03-26
+  extension: 1
+  correctionday: 1

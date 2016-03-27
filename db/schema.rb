@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323174143) do
+ActiveRecord::Schema.define(version: 20160327021845) do
 
   create_table "apartments", force: true do |t|
     t.integer  "community_id"
@@ -63,6 +63,22 @@ ActiveRecord::Schema.define(version: 20160323174143) do
     t.string   "phone"
     t.string   "email"
     t.string   "website"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "configsystems", force: true do |t|
+    t.integer  "interesttype_id"
+    t.decimal  "interesttypeperc"
+    t.integer  "interestreceivableaccount_id"
+    t.decimal  "penaltyamount"
+    t.integer  "penaltyreceivableaccount_id"
+    t.string   "periodyear"
+    t.string   "periodmonth"
+    t.date     "periodinit"
+    t.date     "periodfin"
+    t.integer  "extension"
+    t.integer  "correctionday"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -194,6 +210,19 @@ ActiveRecord::Schema.define(version: 20160323174143) do
     t.integer  "apartment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "services", force: true do |t|
+    t.string   "period"
+    t.decimal  "porcgastocomun"
+    t.decimal  "porcaguacaliente"
+    t.decimal  "porccalefaccion"
+    t.integer  "vendor_id"
+    t.string   "custnumber"
+    t.integer  "payableaccount_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "startscreens", force: true do |t|

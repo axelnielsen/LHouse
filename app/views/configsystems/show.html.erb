@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @configsystem.name %>
+</p>
+
+<p>
+  <strong>Voucher:</strong>
+  <%= @configsystem.voucher %>
+</p>
+
+<p>
+  <strong>Receivableaccount:</strong>
+  <%= @configsystem.receivableaccount_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @configsystem.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @configsystem.description %>
+</p>
+
+<p>
+  <strong>Community:</strong>
+  <%= @configsystem.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @configsystem.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @configsystem.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @configsystem.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @configsystem.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @configsystem.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @configsystem.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_configsystem_path(@configsystem) %> |
+<%= link_to 'Back', configsystems_path %>
