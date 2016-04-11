@@ -3,43 +3,58 @@ class PayableaccountsController < ApplicationController
 
   respond_to :html
 
-  def index
+ def index
     @payableaccounts = Payableaccount.all
-    respond_with(@payableaccounts)
+    #respond_with(@payableaccounts)
   end
 
   def show
-    respond_with(@payableaccount)
+    @payableaccount = Payableaccount.find([:id])
+    #respond_with(@payableaccount)
   end
 
   def new
     @payableaccount = Payableaccount.new
-    respond_with(@payableaccount)
+   # respond_with(@payableaccount)
   end
 
   def edit
+    @payableaccount = Payableaccount.find(params[:id])
   end
 
   def create
-    @payableaccount = Payableaccount.new(payableaccount_params)
-    @payableaccount.save
-    respond_with(@payableaccount)
+  @payableaccounts = Payableaccount.all
+   @payableaccount = Payableaccount.create(payableaccount_params)
+   # @payableaccount = Payableaccount.new(payableaccount_params)
+   # @payableaccount.save
+   # respond_with(@payableaccount)
   end
 
   def update
-    @payableaccount.update(payableaccount_params)
-    respond_with(@payableaccount)
+    @payableaccounts = Payableaccount.all
+    @payableaccount = Payableaccount.find(params[:id])
+    @payableaccount.update_attributes(payableaccount_params)
+    #@payableaccount.update(payableaccount_params)
+    #respond_with(@payableaccount)
   end
 
   def destroy
+    @payableaccounts = Payableaccount.all
+    @payableaccount = Payableaccount.find(params[:id])
     @payableaccount.destroy
-    respond_with(@payableaccount)
+   # @payableaccount.destroy
+   # respond_with(@payableaccount)
+  end
+
+  def delete
+    @payableaccount = Payableaccount.find(params[:payableaccount_id])
   end
 
   private
-    def set_payableaccount
-      @payableaccount = Payableaccount.find(params[:id])
-    end
+   def set_payableaccount
+     @payableaccount = Payableaccount.find(params[:id])
+   end
+
 
     def payableaccount_params
       params.require(:payableaccount).permit(:type, :subtype, :subsubtype, :community_id)

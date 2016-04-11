@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :firstName, :lastName, :email, :password, :password_confirmation, :profile_id, :community_id
+  attr_accessible :firstName, :lastName, :email, :password, :password_confirmation, :profile_id, :community_id, :communitypass
   belongs_to :profile
   belongs_to :community
   has_many :statuses

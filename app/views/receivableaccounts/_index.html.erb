@@ -1,0 +1,14 @@
+<% @receivableaccounts.each do |receivableaccount| %>
+  <tr>
+    <td><%= receivableaccount.name %></td>
+     <td><%= receivableaccount.initbalance %></td>
+      <td><%= receivableaccount.descroption %></td>
+       <td><%= receivableaccount.pymenttype_id %></td>
+        <td><%= receivableaccount.subtype %></td>
+         <td><%= receivableaccount.ammount %></td>
+          <td><%= receivableaccount.percentammount %></td>
+           <td><%= receivableaccount.aliquot %></td>
+             <td><%= receivableaccount.building %></td>
+    <td><%= link_to "Editar", edit_receivableaccount_path(receivableaccount), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

@@ -36,12 +36,13 @@ class CommunitiesController < ApplicationController
     respond_with(@community)
   end
 
+
   private
     def set_community
       @community = Community.find(params[:id])
     end
 
     def community_params
-      params.require(:community).permit(:nombre, :address, :phone, :email, :website, :community_id)
+      params.require(:community).permit(:id, :nombre, :address, :phone, :email, :website, :community_id, :userpass, :adminpass, :concierge)
     end
 end

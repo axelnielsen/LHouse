@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :subpayableaccounts
+
   resources :services
 
   resources :configsystems
@@ -55,8 +57,10 @@ Rails.application.routes.draw do
 
   resources :status_types
 
-  devise_for :users
+  #devise_for :users
   resources :profiles
+
+  devise_for :users, controllers: { registrations: 'users/registrations' } 
 
   root to: 'startscreens#index'
   # The priority is based upon order of creation: first created -> highest priority.

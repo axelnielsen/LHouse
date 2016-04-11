@@ -6,48 +6,58 @@
 </p>
 
 <p>
-  <strong>Initbalance:</strong>
-  <%= @receivableaccount.initbalance %>
+  <strong>Voucher:</strong>
+  <%= @receivableaccount.voucher %>
 </p>
 
 <p>
-  <strong>Descroption:</strong>
-  <%= @receivableaccount.descroption %>
+  <strong>Receivableaccount:</strong>
+  <%= @receivableaccount.receivableaccount_id %>
 </p>
 
 <p>
-  <strong>Pymenttype:</strong>
-  <%= @receivableaccount.pymenttype_id %>
+  <strong>Amount:</strong>
+  <%= @receivableaccount.amount %>
 </p>
 
 <p>
-  <strong>Subtype:</strong>
-  <%= @receivableaccount.subtype %>
-</p>
-
-<p>
-  <strong>Ammount:</strong>
-  <%= @receivableaccount.ammount %>
-</p>
-
-<p>
-  <strong>Percentammount:</strong>
-  <%= @receivableaccount.percentammount %>
-</p>
-
-<p>
-  <strong>Aliquot:</strong>
-  <%= @receivableaccount.aliquot %>
-</p>
-
-<p>
-  <strong>Building:</strong>
-  <%= @receivableaccount.building %>
+  <strong>Description:</strong>
+  <%= @receivableaccount.description %>
 </p>
 
 <p>
   <strong>Community:</strong>
   <%= @receivableaccount.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @receivableaccount.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @receivableaccount.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @receivableaccount.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @receivableaccount.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @receivableaccount.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @receivableaccount.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_receivableaccount_path(@receivableaccount) %> |

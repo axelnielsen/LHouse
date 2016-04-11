@@ -5,41 +5,55 @@ class ReceivableaccountsController < ApplicationController
 
   def index
     @receivableaccounts = Receivableaccount.all
-    respond_with(@receivableaccounts)
+    #respond_with(@receivableaccounts)
   end
 
   def show
-    respond_with(@receivableaccount)
+    @receivableaccount = Receivableaccount.find([:id])
+    #respond_with(@receivableaccount)
   end
 
   def new
     @receivableaccount = Receivableaccount.new
-    respond_with(@receivableaccount)
+   # respond_with(@receivableaccount)
   end
 
   def edit
+    @receivableaccount = Receivableaccount.find(params[:id])
   end
 
   def create
-    @receivableaccount = Receivableaccount.new(receivableaccount_params)
-    @receivableaccount.save
-    respond_with(@receivableaccount)
+  @receivableaccounts = Receivableaccount.all
+   @receivableaccount = Receivableaccount.create(receivableaccount_params)
+   # @receivableaccount = Receivableaccount.new(receivableaccount_params)
+   # @receivableaccount.save
+   # respond_with(@receivableaccount)
   end
 
   def update
-    @receivableaccount.update(receivableaccount_params)
-    respond_with(@receivableaccount)
+    @receivableaccounts = Receivableaccount.all
+    @receivableaccount = Receivableaccount.find(params[:id])
+    @receivableaccount.update_attributes(receivableaccount_params)
+    #@receivableaccount.update(receivableaccount_params)
+    #respond_with(@receivableaccount)
   end
 
   def destroy
+    @receivableaccounts = Receivableaccount.all
+    @receivableaccount = Receivableaccount.find(params[:id])
     @receivableaccount.destroy
-    respond_with(@receivableaccount)
+   # @receivableaccount.destroy
+   # respond_with(@receivableaccount)
+  end
+
+  def delete
+    @receivableaccount = Receivableaccount.find(params[:receivableaccount_id])
   end
 
   private
-    def set_receivableaccount
-      @receivableaccount = Receivableaccount.find(params[:id])
-    end
+   def set_receivableaccount
+     @receivableaccount = Receivableaccount.find(params[:id])
+   end
 
     def receivableaccount_params
       params.require(:receivableaccount).permit(:name, :initbalance, :descroption, :pymenttype_id, :subtype, :ammount, :percentammount, :aliquot, :building, :community_id)

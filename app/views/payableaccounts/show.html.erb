@@ -1,23 +1,63 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @payableaccount.type %>
+  <strong>Name:</strong>
+  <%= @payableaccount.name %>
 </p>
 
 <p>
-  <strong>Subtype:</strong>
-  <%= @payableaccount.subtype %>
+  <strong>Voucher:</strong>
+  <%= @payableaccount.voucher %>
 </p>
 
 <p>
-  <strong>Subsubtype:</strong>
-  <%= @payableaccount.subsubtype %>
+  <strong>Receivableaccount:</strong>
+  <%= @payableaccount.receivableaccount_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @payableaccount.amount %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @payableaccount.description %>
 </p>
 
 <p>
   <strong>Community:</strong>
   <%= @payableaccount.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @payableaccount.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @payableaccount.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @payableaccount.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @payableaccount.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @payableaccount.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @payableaccount.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_payableaccount_path(@payableaccount) %> |

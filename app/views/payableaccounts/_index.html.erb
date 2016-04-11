@@ -1,0 +1,6 @@
+<% @payableaccounts.each do |payableaccount| %>
+  <tr>
+    <td><%= payableaccount.type %></td>
+    <td><%= link_to "Editar", edit_payableaccount_path(payableaccount), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

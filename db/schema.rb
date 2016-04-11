@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327021845) do
+ActiveRecord::Schema.define(version: 20160329010447) do
 
   create_table "apartments", force: true do |t|
     t.integer  "community_id"
@@ -65,6 +65,9 @@ ActiveRecord::Schema.define(version: 20160327021845) do
     t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "userpass"
+    t.string   "adminpass"
+    t.string   "concierge"
   end
 
   create_table "configsystems", force: true do |t|
@@ -249,6 +252,12 @@ ActiveRecord::Schema.define(version: 20160327021845) do
   add_index "statuses", ["statusType_id"], name: "index_statuses_on_statusType_id"
   add_index "statuses", ["user_id"], name: "index_statuses_on_user_id"
 
+  create_table "subpayableaccounts", force: true do |t|
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tasks", force: true do |t|
     t.string   "name"
     t.date     "inidate"
@@ -294,6 +303,7 @@ ActiveRecord::Schema.define(version: 20160327021845) do
     t.datetime "updated_at",                         null: false
     t.integer  "profile_id"
     t.integer  "community_id"
+    t.string   "communitypass"
   end
 
   add_index "users", ["community_id"], name: "index_users_on_community_id"

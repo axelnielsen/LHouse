@@ -10,6 +10,8 @@ gem 'devise'
 
 gem 'protected_attributes'
 
+gem 'binding_of_caller'
+gem 'better_errors'
 gem 'simple_form'
 gem "simple_calendar", "~> 2.0"
 

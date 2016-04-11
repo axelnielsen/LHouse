@@ -1,0 +1,2 @@
+module SubpayableaccountsHelper
+end

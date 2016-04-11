@@ -1,5 +1,5 @@
 class Community < ActiveRecord::Base
-	attr_accessible   :nombre, :address, :phone, :email, :website, :community_id
+	attr_accessible   :nombre, :address, :phone, :email, :website, :community_id, :userpass, :adminpass, :concierge
 
 	has_many :users
 	has_many :common_rooms
@@ -12,4 +12,14 @@ class Community < ActiveRecord::Base
 	def name
 		nombre
 	end
+	def randompassuser	   
+	   		p "u"+SecureRandom.urlsafe_base64(6)
+	end
+	def randompassadmin	   
+	   		p "a"+SecureRandom.urlsafe_base64(6)
+	end
+	def randompassconcierge	   
+	   		p "c"+SecureRandom.urlsafe_base64(6)
+	end
+
 end

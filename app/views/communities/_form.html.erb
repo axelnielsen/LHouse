@@ -17,7 +17,22 @@ antes de form inputs
     <%= f.input :phone %>
     <%= f.input :email %>
     <%= f.input :website %>
-  </div>
+    <%if :userpass =="" %>
+    <%= f.input :userpass ,input_html: {value: @community.randompassuser}, :readonly => true%>
+    <%else%>
+    <%= f.input :userpass , :readonly => true%>
+    <%end%>
+     <%if :adminpass==""%>
+    <%= f.input :adminpass ,input_html: {value: @community.randompassadmin}, :readonly => true%>
+    <%else%>
+    <%= f.input :adminpass , :readonly => true%>
+    <%end%>
+     <%if :concierge==""%>
+    <%= f.input :concierge ,input_html: {value: @community.randompassconcierge}, :readonly => true%>
+    <%else%>
+    <%= f.input :concierge , :readonly => true%>
+    <%end%>
+    </div>
   antes de form actions
   <div class="form-actions">
     
