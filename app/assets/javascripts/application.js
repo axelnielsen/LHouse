@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables.foundation
@@ -23,6 +24,7 @@
 //= require dataTables/jquery.dataTables
 //= require turbolinks
 //= require bootstrap-datepicker
+//= require app
 //= require_tree .
 
 $(function () {

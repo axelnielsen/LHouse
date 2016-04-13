@@ -14,6 +14,8 @@ gem 'binding_of_caller'
 gem 'better_errors'
 gem 'simple_form'
 gem "simple_calendar", "~> 2.0"
+gem 'paperclip', '~> 4.1'
+gem 'adminlte2-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

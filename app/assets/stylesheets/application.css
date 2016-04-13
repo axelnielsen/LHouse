@@ -20,6 +20,11 @@
  *= require bootstrap-datepicker
  *= require simple_calendar
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
+
 @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
 
 body {
@@ -240,10 +245,20 @@ form[role=login] {
 	padding: 15px 18px;
 }
 /* Main body section */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
+
 .side-body {
 	margin-left: 310px;
 }
 /* small screen */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
+
 @media (max-width: 768px) {
 	.side-menu {
 		position: relative;
@@ -264,6 +279,11 @@ form[role=login] {
 		display: inline-block;
 	}
 	/* Slide in animation */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
+
 	@-moz-keyframes slidein {
 		0% {
 			left: -300px;
@@ -314,6 +334,11 @@ form[role=login] {
 	}
 	/* Slide side menu*/
 	/* Add .absolute-wrapper.slide-in for scrollable menu -> see top comment */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
+
 	.side-menu-container > .navbar-nav.slide-in {
 		-moz-animation: slidein 300ms forwards;
 		-o-animation: slidein 300ms forwards;
@@ -324,6 +349,11 @@ form[role=login] {
 	}
 	.side-menu-container > .navbar-nav {
 		/* Add position:absolute for scrollable menu -> see top comment */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "AdminLTE/AdminLTE";
+@import "AdminLTE/skins/skin-blue";
+
 		position: fixed;
 		left: -300px;
 		width: 300px;

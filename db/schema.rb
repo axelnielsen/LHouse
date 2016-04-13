@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329010447) do
+ActiveRecord::Schema.define(version: 20160412010647) do
 
   create_table "apartments", force: true do |t|
     t.integer  "community_id"
@@ -304,6 +304,10 @@ ActiveRecord::Schema.define(version: 20160329010447) do
     t.integer  "profile_id"
     t.integer  "community_id"
     t.string   "communitypass"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["community_id"], name: "index_users_on_community_id"
