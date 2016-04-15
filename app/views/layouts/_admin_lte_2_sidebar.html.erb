@@ -29,17 +29,106 @@
 
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
-      <li class="header">HEADER</li>
+      <li class="header">Menu Principal</li>
         <!-- Optionally, you can add icons to the links -->
-      <li class="active"><a href="#"><i class='fa fa-link'></i> <span>Link</span></a></li>
-      <li><a href="#"><i class='fa fa-link'></i> <span>Another Link</span></a></li>
-      <li class="treeview">
-        <a href="#"><i class='fa fa-link'></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-        <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
-        </ul>
-      </li>
+       <li class="treeview">
+              <a href="#">
+                <i class="fa fa-dashboard"></i> <span>Panel de control</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+              </ul>
+            </li>
+
+
+              <li class="treeview">
+              <a href="#">
+                <i class="fa fa-tasks"></i> <span>Tareas</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><%= link_to tasks_path, class: "" do %>
+                <i class="fa fa-circle-o"></i> Nuevas</a>
+                <% end %>  
+                </li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Histórico</a></li>
+              </ul>
+            </li>
+
+             <li>
+                <%= link_to newsbooks_path, class: "" do %>
+                <i class="fa fa-book"></i> <span>Libro de novedades</span>
+                <small class="label pull-right bg-red">3</small>
+               <% end %> 
+            </li>
+              <li class="treeview">
+              <a href="#">
+                <i class="fa fa-usd"></i> <span>Movimientos</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Egresos</a></li>
+              </ul>
+            </li>
+              <li class="treeview">
+              <a href="#">
+                <i class="fa fa-comments"></i> <span>Publicaciones</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Mural Comunidad</a></li>
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Anuncios</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Vecinos</a></li>
+              </ul>
+            </li>
+              <li class="treeview">
+                  <%= link_to messages_path, class: "" do %>
+                  <i class="fa fa-envelope"></i><span> Mensajes</span><small class="label pull-right bg-yellow">4</small>  
+                  <% end %>                              
+             </li>
+               <li class="treeview">
+              <a href="#">
+                <i class="fa fa-building"></i> <span>Comunidad</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Torres</a></li>
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Departamentos</a></li>
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Espacios comunes</a></li>
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Estacionamientos</a></li>
+              </ul>
+            </li>
+             <li>
+                <%= link_to vendors_path, class: "" do %>
+                <i class="fa fa-book"></i> <span>Proveedores</span>
+                <% end %> 
+            </li>
+                <li class="treeview">
+              <a href="#">
+                <i class="fa fa-money fa-fw"></i> <span>Banco</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Egresos</a></li>
+              </ul>
+            </li>
+              <li class="treeview">
+              <a href="#">
+                <i class="fa fa-folder"></i> <span>Cuentas</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Egresos</a></li>
+              </ul>
+            </li>
+              <li class="treeview">
+              <a href="#">
+                <i class="fa fa-cutlery"></i> <span>Servicios</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Egresos</a></li>
+              </ul>
+            </li>
+
     </ul><!-- /.sidebar-menu -->
   </section>
   <!-- /.sidebar -->

@@ -24,6 +24,7 @@
 //= require dataTables/jquery.dataTables
 //= require turbolinks
 //= require bootstrap-datepicker
+//= require fullcalendar
 //= require app
 //= require_tree .
 
