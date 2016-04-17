@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :subpayableaccounts
+  
+  resources :communities do
+  collection { post :import }
+  end
 
   resources :services
 

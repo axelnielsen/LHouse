@@ -1,0 +1,14 @@
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.name %></td>
+    <td><%= task.voucher %></td>
+    <td><%= task.receivableaccount_id %></td>
+    <td><%= task.amount %></td>
+    <td><%= task.paymentdate %></td>
+    <td><%= task.apartment_id %></td>
+    <td><%= task.paymentmethod_id %></td>
+    <td><%= task.image %></td>
+    <td><%= task.period %></td>
+    <td><%= link_to "Editar", edit_task_path(task), class: "btn btn-warning" %></td>     
+  </tr>
+<% end %>

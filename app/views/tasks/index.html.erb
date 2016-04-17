@@ -1,43 +1,98 @@
-<table id="tasks" class="table-responsive order-column uk-table uk-table-hover uk-table-striped display" >
-  <thead>
-    <tr>
-      <th>Tarea</th>
-      <th>Fecha Inicio</th>
-      <th>Fecha Fin</th>
-      <th>Creador</th>
-      <th>Ejecutante</th>
-      <th>Avance</th>
-      <th>Acciones</th>
+<div class="container">
 
-     
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @tasks.each do |task| %>
+   <div class="row">
+            <div class="col-md-6">
+              <!-- AREA CHART -->
+              <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Ingresos vs Egresos</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <div class="chart">
+                    <canvas id="areaChart" style="height: 250px; width: 510px;" width="510" height="250"></canvas>
+                  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+              <!-- DONUT CHART -->
+              <div class="box box-danger">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Pie</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="box-body">
+                     <canvas id="pieChart" width="640" height="400"></canvas>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+            </div><!-- /.col (LEFT) -->
+            <div class="col-md-6">
+              <!-- LINE CHART -->
+              <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Líneas</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <div class="chart">
+                    <canvas id="lineChart" style="height: 250px; width: 510px;" width="510" height="250"></canvas>
+                  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+              <!-- BAR CHART -->
+              <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Barras</h3>
+                  <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <div class="chart">
+                    <canvas id="barChart" style="height: 230px; width: 510px;" width="510" height="230"></canvas>
+                  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+
+            </div><!-- /.col (RIGHT) -->
+          </div>
+
+  <div class="well">
+    <%= link_to "Nuevo Ingreso", new_task_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-task"></div>
+  
+  <table class="table-responsive order-column uk-table uk-table-hover uk-table-striped display">
+    <thead>
       <tr>
-        <td><%= link_to task.name, @task %></td>
-        <td><%= task.inidate %></td>
-        <td><%= task.findate %></td>
-        <td><%= task.user_id_from %></td>
-        <td><%= task.user_id_to %></td>
-        <td><%= task.perccompleted %></td>
-         <td><%= link_to task, class: "btn btn-default" do %>
-            <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
-            <% end %> 
-            <%= link_to edit_task_path(task), class: "btn btn-default" do %>
-            <span class="glyphicon glyphicon-edit" style="color:orange"></span>
-            <% end %>
-            <%= link_to task, method: :delete, data:{confirm: "Confirma la aliminación?"}, class: "btn btn-default" do%>
-            <span class="glyphicon glyphicon-trash" style="color:red"></span>
-            <% end %>
-        </td>
-        
+        <th>Nombre</th>
+        <th>voucher</th>
+        <th>receivableaccount_id</th>
+        <th>amount</th>
+        <th>paymentdate</th>
+        <th>apartment_id</th>
+        <th>paymentmethod_id</th>
+        <th>image</th>
+        <td>period</td>
+        <td>&nbsp;</td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<%= link_to "Nueva tarea", new_task_path, class:"btn btn-primary" %>
-
+    </thead>
+    <tbody class="task-index">
+      <%= render "index" %>
+    </tbody>
+  </table>
+</div>
+<div id="task-modal" class="modal fade"></div>

@@ -4,8 +4,19 @@ class CommunitiesController < ApplicationController
   respond_to :html
 
   def index
-    @communities = Community.all
-    respond_with(@communities)
+    @communities=Community.order(:nombre)
+    respond_to do |format|
+    format.html
+    format.csv { send_data @communities.to_csv }
+    format.xls # { send_data @products.to_csv(col_sep: "\t") }
+  end
+   # @communities = Community.all
+   # respond_with(@communities)
+  end
+
+  def import
+  Community.import(params[:file])
+  redirect_to root_url, notice: "Archivo importado exitosamente!"
   end
 
   def show

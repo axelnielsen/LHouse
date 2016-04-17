@@ -25,6 +25,7 @@
 //= require turbolinks
 //= require bootstrap-datepicker
 //= require fullcalendar
+//= require chart
 //= require app
 //= require_tree .
 

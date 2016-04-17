@@ -16,6 +16,10 @@ gem 'simple_form'
 gem "simple_calendar", "~> 2.0"
 gem 'paperclip', '~> 4.1'
 gem 'adminlte2-rails'
+gem 'rubyzip'
+#gem "rails_admin_import", "~> 1.2"
+gem 'roo'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

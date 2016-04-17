@@ -10,9 +10,9 @@
         <img src="/assets/user2-160x160.jpg" class="img-circle" alt="User Image" />
       </div>
       <div class="pull-left info">
-        <p>Alexander Pierce</p>
+        <p>Axel Nielsen</p>
         <!-- Status -->
-        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        <a href="#"><i class="fa fa-circle text-success"></i> En Línea</a>
       </div>
     </div>
 
@@ -36,8 +36,9 @@
                 <i class="fa fa-dashboard"></i> <span>Panel de control</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Administrador</a></li>
+                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Conserje</a></li>
+                <li><a href="index.html"><i class="fa fa-circle-o"></i> Vecinos</a></li>
               </ul>
             </li>
 
@@ -115,10 +116,16 @@
                 <i class="fa fa-folder"></i> <span>Cuentas</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="index.html"><i class="fa fa-circle-o"></i> Ingresos</a></li>
-                <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Egresos</a></li>
-              </ul>
-            </li>
+                <li><%= link_to receivableaccounts_path, class: "" do %>
+                <i class="fa fa-circle-o"></i>  Cuentas de ingreso</a>
+                <% end %>  
+                </li>
+                 <li><%= link_to payableaccounts_path, class: "" do %>
+                <i class="fa fa-circle-o"></i>  Cuentas de egreso</a>
+                <% end %>  
+                </li>
+                </ul>
+                </li>
               <li class="treeview">
               <a href="#">
                 <i class="fa fa-cutlery"></i> <span>Servicios</span> <i class="fa fa-angle-left pull-right"></i>

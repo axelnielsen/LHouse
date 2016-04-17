@@ -85,8 +85,11 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.99.1)
     mimemagic (0.3.0)
+    mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
+    nokogiri (1.6.7.2-x86-mingw32)
+      mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
     paperclip (4.3.6)
       activemodel (>= 3.2.0)
@@ -119,6 +122,10 @@ GEM
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    roo (2.3.2)
+      nokogiri (~> 1)
+      rubyzip (~> 1.1, < 2.0.0)
+    rubyzip (1.2.0)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -177,6 +184,8 @@ DEPENDENCIES
   paperclip (~> 4.1)
   protected_attributes
   rails (= 4.1.8)
+  roo
+  rubyzip
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_calendar (~> 2.0)

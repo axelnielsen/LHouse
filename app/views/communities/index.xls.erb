@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">id</Data></Cell>
+        <Cell><Data ss:Type="String">Nombre</Data></Cell>
+        <Cell><Data ss:Type="String">Dirección</Data></Cell>
+        <Cell><Data ss:Type="String">Email</Data></Cell>
+        <Cell><Data ss:Type="String">Sitio Web</Data></Cell>
+        <Cell><Data ss:Type="String">Contraseña Usuario</Data></Cell>
+        <Cell><Data ss:Type="String">Contraseña Administrador</Data></Cell>
+        <Cell><Data ss:Type="String">Contraseña Conserje</Data></Cell>
+   
+      </Row>
+    <% @communities.each do |community| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= community.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.nombre %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.address %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.email %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.website %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.userpass %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.adminpass %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= community.concierge %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

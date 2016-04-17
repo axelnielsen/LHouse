@@ -1,22 +1,63 @@
-<%= simple_form_for(@task) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name, :label => "Asunto" %>
-   
-    <%= f.input :content, :label => "Texto" %>
-    <%= f.input :inidate , :as=> 'string' , :input_html=> {data: { provide: "datepicker" }} , :label => "Fecha Inicio" %>
-    <%= f.input :inihour , :label => "Hora Inicio"%>
-     <%= f.input :findate , :as=> 'string' , :input_html=> {data: { provide: "datepicker" }} , :label => "Fecha Término" %>
-    <%= f.input :finhour , :label => "Hora Término"%>
-    <%= f.input :user_id_from %>
-    <%= f.input :user_id_to %>
-    <%= f.input :perccompleted , :label => "Porcentaje Completado", :value => "0" %>
-
+<div class="modal-dialog">
+  <div class="modal-content">
+    <%= form_for @task, remote: true, html: { style: "display:inline;" } do |f| %>
+      <div class="modal-body">
+        <ul class="errors"></ul>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :name, class:"control-label" %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :inidate, class:"control-label" %>
+          <%= f.text_field :inidate, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :inihour, class:"control-label" %>
+          <%= f.text_field :inihour, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :findate, class:"control-label" %>
+          <%= f.text_field :findate, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :finhour, class:"control-label" %>
+          <%= f.text_field :finhour, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :content, class:"control-label" %>
+          <%= f.text_field :content, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :user_id_from, class: "control-label" %>
+          <%= f.text_field :user_id_from, class: "form-control" %>
+        </div>
+</div>
+<div class="col-sm-6">
+        <div class="form-group">
+          <%= f.label :user_id_to, class: "control-label" %>
+          <%= f.text_field :user_id_to, class: "form-control" %>
+        </div>
   </div>
-
-  <div class="form-actions">
-
-    <%= f.button :submit, class:"btn btn-success"%>
+<div class="col-sm-12">
+        <div class="form-group">
+          <%= f.label :perccompleted, class: "control-label" %>
+          <%= f.text_field :perccompleted, class: "form-control" %>
+        </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit class: "btn btn-success" %>
+        <%= link_to "Cancelar", "#", class: "btn btn-danger", data: {dismiss: "modal"} %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
