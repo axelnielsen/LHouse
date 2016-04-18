@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subsubaccount.name %>
+</p>
+
+<p>
+  <strong>Subaccount:</strong>
+  <%= @subsubaccount.subaccount_id %>
+</p>
+
+<%= link_to 'Edit', edit_subsubaccount_path(@subsubaccount) %> |
+<%= link_to 'Back', subsubaccounts_path %>

@@ -1,0 +1,27 @@
+<h1>Listing subsubaccounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Subaccount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subsubaccounts.each do |subsubaccount| %>
+      <tr>
+        <td><%= subsubaccount.name %></td>
+        <td><%= subsubaccount.subaccount_id %></td>
+        <td><%= link_to 'Show', subsubaccount %></td>
+        <td><%= link_to 'Edit', edit_subsubaccount_path(subsubaccount) %></td>
+        <td><%= link_to 'Destroy', subsubaccount, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subsubaccount', new_subsubaccount_path %>

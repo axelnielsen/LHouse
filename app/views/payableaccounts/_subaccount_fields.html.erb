@@ -1,0 +1,11 @@
+<p>
+  <%= f.label :name, "Sub cuenta" %><br />
+  <%= f.text_field :name, :rows => 3 %><br />
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "eliminar Subcuenta" %>
+</p>
+  
+<%= f.fields_for :subsubaccounts do |builder| %>
+  <%= render 'subsubaccount_fields', :f => builder %>
+  <br/>
+<% end %>

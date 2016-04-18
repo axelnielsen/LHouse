@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160412010647) do
+ActiveRecord::Schema.define(version: 20160418001925) do
 
   create_table "apartments", force: true do |t|
     t.integer  "community_id"
@@ -252,8 +252,22 @@ ActiveRecord::Schema.define(version: 20160412010647) do
   add_index "statuses", ["statusType_id"], name: "index_statuses_on_statusType_id"
   add_index "statuses", ["user_id"], name: "index_statuses_on_user_id"
 
+  create_table "subaccounts", force: true do |t|
+    t.string   "name"
+    t.integer  "payableaccount_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "subpayableaccounts", force: true do |t|
     t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subsubaccounts", force: true do |t|
+    t.string   "name"
+    t.integer  "subaccount_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

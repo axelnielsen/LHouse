@@ -15,6 +15,10 @@ class PayableaccountsController < ApplicationController
 
   def new
     @payableaccount = Payableaccount.new
+      3.times do 
+             subaccount=@payableaccount.subaccounts.build
+             3.times { subaccount.subsubaccounts.build}
+      end
    # respond_with(@payableaccount)
   end
 

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :subsubaccounts
+
+  resources :subaccounts
+
   resources :subpayableaccounts
   
   resources :communities do
