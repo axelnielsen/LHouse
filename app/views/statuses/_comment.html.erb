@@ -16,8 +16,9 @@
                                       </div>              
                           			  </div>              
                      			</li>
-                     			<div id="Responder<%=comment.id%>" >       	
+                     			<div id="Responder<%=comment.id%>"  >       	
 								  <%= form_for [comment, Comment.new] do |f| %>
+                  responder
 								      <%= f.text_area :comment, placeholder: "Responder" %><br/>
 								      <%= f.submit "Responder"  %>
 								      <% end %>

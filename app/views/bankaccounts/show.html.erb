@@ -6,28 +6,58 @@
 </p>
 
 <p>
-  <strong>Accountholder:</strong>
-  <%= @bankaccount.accountholder %>
+  <strong>Voucher:</strong>
+  <%= @bankaccount.voucher %>
 </p>
 
 <p>
-  <strong>Accountnum:</strong>
-  <%= @bankaccount.accountnum %>
+  <strong>Receivableaccount:</strong>
+  <%= @bankaccount.receivableaccount_id %>
 </p>
 
 <p>
-  <strong>Bankname:</strong>
-  <%= @bankaccount.bankname %>
+  <strong>Amount:</strong>
+  <%= @bankaccount.amount %>
 </p>
 
 <p>
-  <strong>Initbalance:</strong>
-  <%= @bankaccount.initbalance %>
+  <strong>Description:</strong>
+  <%= @bankaccount.description %>
 </p>
 
 <p>
   <strong>Community:</strong>
   <%= @bankaccount.community_id %>
+</p>
+
+<p>
+  <strong>Paymentdate:</strong>
+  <%= @bankaccount.paymentdate %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @bankaccount.apartment_id %>
+</p>
+
+<p>
+  <strong>Paymentmethod:</strong>
+  <%= @bankaccount.paymentmethod_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @bankaccount.image %>
+</p>
+
+<p>
+  <strong>Period:</strong>
+  <%= @bankaccount.period %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bankaccount.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_bankaccount_path(@bankaccount) %> |

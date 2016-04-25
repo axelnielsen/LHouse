@@ -9,7 +9,7 @@ class VendorsController < ApplicationController
   end
 
   def show
-    @vendor = Vendor.find([:id])
+    @vendor = Vendor.find(params[:id])
     #respond_with(@vendor)
   end
 

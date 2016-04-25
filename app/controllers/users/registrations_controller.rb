@@ -57,7 +57,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
       :contactPhone => @contactEmail,
       :profile_id => @profile_id
    }); 
-   logger.debug "New user post creación: #{@user.attributes.inspect}" 
    if @user.save()
       redirect_to startscreens_path, :notice => "Usuario creado exitosamente, favor confirmar email enviado";
    end

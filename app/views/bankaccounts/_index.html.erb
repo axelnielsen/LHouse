@@ -1,0 +1,20 @@
+<% @bankaccounts.where(:community_id => current_user.community_id).each do |bankaccount| %>
+  <tr>
+    <td><%= bankaccount.name %></td>
+    <td><%= bankaccount.accountholder %></td>
+    <td><%= bankaccount.accountnum %></td>
+    <td><%= bankaccount.bankname %></td>
+
+    <td>
+         <%= link_to bankaccount_path(bankaccount), class: "" do %>
+         <i class="fa fa-eye" style="color:green"></i> </a>
+         <% end %> | 
+         <%= link_to edit_bankaccount_path(bankaccount), class: "" do %>
+         <i class="fa fa-pencil-square-o" style="color:orange"></i> </a>
+         <% end %> | 
+         <%= link_to  bankaccount, method: :delete, data: { confirm: 'Estás seguro?' } , class: "" do %>
+         <i class="fa fa-trash" style="color:red"></i> </a>
+         <% end %>        
+    </td>     
+  </tr>
+<% end %>

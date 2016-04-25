@@ -4,4 +4,10 @@ attr_accessible :name, :accountholder, :accountnum, :bankname, :initbalance, :co
 
 belongs_to :community
 
+validates :name, presence: true 
+validates :accountholder, presence: true 
+validates :accountnum, presence: true 
+validates :bankname, presence: true 
+validates :initbalance, presence: true 
+
 end
