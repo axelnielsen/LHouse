@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">id</Data></Cell>
+        <Cell><Data ss:Type="String">Nombre</Data></Cell>
+        <Cell><Data ss:Type="String">Rut</Data></Cell>
+        <Cell><Data ss:Type="String">Banco</Data></Cell>
+        <Cell><Data ss:Type="String">Fono</Data></Cell>
+        <Cell><Data ss:Type="String">Mail</Data></Cell>
+        <Cell><Data ss:Type="String">Sitio Web</Data></Cell>
+        <Cell><Data ss:Type="String">Dirección</Data></Cell>
+           
+      </Row>
+    <% @vendors.where(:community_id => current_user.community_id).each do |vendor| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= vendor.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.rut %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.bankname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.contactphone %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.contactmail %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.website %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= vendor.address %></Data></Cell>
+
+       
+       
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

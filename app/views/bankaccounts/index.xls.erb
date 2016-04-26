@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">id</Data></Cell>
+        <Cell><Data ss:Type="String">Nombre</Data></Cell>
+        <Cell><Data ss:Type="String">Titular</Data></Cell>
+        <Cell><Data ss:Type="String">N° Cuenta</Data></Cell>
+        <Cell><Data ss:Type="String">Banco</Data></Cell>
+        <Cell><Data ss:Type="String">Saldo Inicial</Data></Cell>
+           
+      </Row>
+    <% @bankaccounts.where(:community_id => current_user.community_id).each do |bankaccount| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= bankaccount.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= bankaccount.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= bankaccount.accountholder %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= bankaccount.accountnum %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= bankaccount.bankname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= bankaccount.initbalance %></Data></Cell>
+       
+       
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

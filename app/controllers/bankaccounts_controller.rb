@@ -4,8 +4,18 @@ class BankaccountsController < ApplicationController
   respond_to :html
 
   def index
-    @bankaccounts = Bankaccount.all
-    #respond_with(@bankaccounts)
+     @bankaccounts=Bankaccount.order(:name)
+    respond_to do |format|
+    format.html
+    format.csv { send_data @bankaccounts.to_csv }
+    format.xls # { send_data @products.to_csv(col_sep: "\t") }
+  end
+ 
+  end
+
+  def import
+  Bankaccount.import(params[:file])
+  redirect_to root_url, notice: "Archivo importado exitosamente!"
   end
 
   def show

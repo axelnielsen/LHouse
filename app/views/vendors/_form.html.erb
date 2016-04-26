@@ -52,6 +52,7 @@
           <%= f.label "Cuenta De Egreso", class: "control-label" %>
           <%= f.text_field :bankaccount_id, class: "form-control" %>
         </div>
+        <%= f.hidden_field :community_id, :value => current_user.community_id, class: "form-control" %>
 </div>
       </div>
       <div class="modal-footer">

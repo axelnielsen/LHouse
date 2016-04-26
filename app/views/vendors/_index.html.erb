@@ -1,4 +1,4 @@
-<% @vendors.each do |vendor| %>
+<% @vendors.where(:community_id => current_user.community_id).each do |vendor| %>
   <tr>
     <td><%= vendor.name %></td>
     <td><%= vendor.rut %></td>

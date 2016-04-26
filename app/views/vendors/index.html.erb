@@ -1,6 +1,21 @@
 <div class="container">
   <div class="well">
     <%= link_to "Nuevo Proveedor", new_vendor_path, remote: true, class: "btn btn-primary" %>
+
+      <div class="pull-right hidden-s">
+      
+          Exportar:
+          <%= link_to "CSV", vendors_path(format: "csv") %> |
+          <%= link_to "Excel", vendors_path(format: "xls") %><br/>
+
+          Importar:<%= form_tag import_vendors_path, multipart: true do %>
+          <%= file_field_tag :file %>
+          <%= submit_tag "Importar" %>
+
+      <% end %>
+
+</div>
+
   </div>
   <div class="new-vendor"></div>
   

@@ -45,9 +45,13 @@ Rails.application.routes.draw do
 
   resources :payableaccounts
 
-  resources :vendors
+  resources :vendors do
+  collection { post :import }
+  end
 
-  resources :bankaccounts
+  resources :bankaccounts do
+  collection { post :import }
+  end
 
   resources :messages
 

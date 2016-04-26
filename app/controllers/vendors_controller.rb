@@ -4,8 +4,17 @@ class VendorsController < ApplicationController
   respond_to :html
 
   def index
-    @vendors = Vendor.all
-    #respond_with(@vendors)
+    @vendors=Vendor.order(:name)
+    respond_to do |format|
+    format.html
+    format.csv { send_data @vendors.to_csv }
+    format.xls # { send_data @products.to_csv(col_sep: "\t") }
+  end
+  end
+
+  def import
+  Vendor.import(params[:file])
+  redirect_to root_url, notice: "Archivo importado exitosamente!"
   end
 
   def show
